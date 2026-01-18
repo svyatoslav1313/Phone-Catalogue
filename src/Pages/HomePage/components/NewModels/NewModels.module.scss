@@ -1,0 +1,12 @@
+@use '../../../../assets/styles/abstracts/index' as *;
+
+.newModels {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

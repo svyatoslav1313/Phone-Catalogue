@@ -1,0 +1,67 @@
+@use '../../../assets/styles/abstracts/index' as *;
+
+.catalogHeader {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.breadcrumbContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.houseContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    background: transparent;
+  }
+}
+
+.house {
+  color: var(--color-primary);
+}
+
+.arrow {
+  color: var(--color-icons);
+}
+
+.pageName {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.itemName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-secondary);
+}
+
+.title {
+  margin: 0;
+}
+
+.count {
+  color: var(--color-secondary);
+  @include body-text;
+}

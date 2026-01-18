@@ -1,0 +1,38 @@
+@use '../../../../assets/styles/abstracts/index' as *;
+
+.productAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include on-tablet {
+    grid-column: 1 / -1;
+  }
+
+  @include on-desktop {
+    grid-column: span 12;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-elements);
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.description {
+  color: var(--color-secondary);
+  @include body-text;
+}

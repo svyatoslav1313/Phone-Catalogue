@@ -1,0 +1,36 @@
+@use '../../assets/styles/abstracts/index' as *;
+
+.favorites {
+  margin-bottom: auto;
+}
+
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty {
+  max-width: 320px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  @include on-tablet {
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.itemsCount {
+  display: block;
+  color: var(--color-secondary);
+  @include body-text;
+  margin-bottom: 32px;
+}

@@ -1,0 +1,100 @@
+@use '../../../assets/styles/abstracts/index' as *;
+
+.dropdowns {
+  display: flex;
+  gap: 16px;
+}
+
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.name {
+  color: var(--color-secondary);
+  @include small-text;
+}
+
+.dropdown {
+  cursor: pointer;
+  background: none;
+  width: 136px;
+  height: 40px;
+  border: 1px solid var(--color-icons);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color var(--effect-duration) ease;
+
+  &:active {
+    background-color: var(--color-elements);
+  }
+}
+
+.filter {
+  color: var(--color-primary);
+}
+
+.icon {
+  color: var(--color-primary);
+  transition: transform var(--effect-duration-fast) ease;
+}
+
+.list {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  top: 70px;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0);
+  padding-block: 14px;
+  background-color: var(--color-hover-bg);
+  border: 1px solid var(--color-icons);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transform-origin: top;
+  transition:
+    transform var(--effect-duration) ease,
+    opacity var(--effect-duration) ease;
+}
+
+.itemContainer {
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all var(--effect-duration) ease;
+
+  &:hover {
+    background-color: var(--color-elements);
+  }
+
+  &:hover .dropdown__item {
+    color: var(--color-primary);
+  }
+}
+
+.activeItemContainer {
+  background-color: var(--color-elements);
+}
+
+.item {
+  color: var(--color-secondary);
+}
+
+.activeItem {
+  color: var(--color-primary);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}

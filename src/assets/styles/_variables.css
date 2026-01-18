@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --color-accent: #4219d0;
+  --color-secondary-accent: #f4ba47;
+  --color-primary: #0f0f11;
+  --color-secondary: #89939a;
+  --color-icons: #b4bdc3;
+  --color-elements: #e2e6e9;
+  --color-hover-bg: #fafbfc;
+  --color-white: #fff;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+
+  /* Effects */
+  --effect-duration: 0.3s;
+  --effect-duration-fast: 0.1s;
+
+  /* Fonts */
+  --font-main: 'Mont', Arial, Helvetica, sans-serif;
+
+  /* Transform */
+  --scale-default: 1.1;
+  --scale-subtle: 1.05;
+}

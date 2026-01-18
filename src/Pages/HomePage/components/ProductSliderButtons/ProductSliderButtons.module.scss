@@ -1,0 +1,27 @@
+@use '../../../../assets/styles/abstracts/index' as *;
+
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-elements);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color var(--effect-duration);
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

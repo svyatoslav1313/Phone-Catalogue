@@ -1,0 +1,98 @@
+@use '../../../../assets/styles/abstracts/index' as *;
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-inline: -16px;
+
+  @include on-tablet {
+    margin: 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 19px;
+}
+
+.button {
+  cursor: pointer;
+  display: none;
+
+  width: 32px;
+  border: 1px solid var(--color-icons);
+  border-radius: 48px;
+  transition: border-color var(--effect-duration);
+
+  @include on-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+
+  @include on-tablet {
+    aspect-ratio: 13 / 5;
+    border-radius: 8px;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  transition: transform var(--effect-duration);
+  height: 100%;
+}
+
+.item {
+  flex: 0 0 100%;
+
+  width: 100%;
+  height: auto;
+
+  @include on-tablet {
+    border-radius: 8px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+
+  @include on-tablet {
+    border-radius: 8px;
+  }
+}
+
+.indicators {
+  display: flex;
+  gap: 9px;
+}
+
+.indicator {
+  width: 14px;
+  height: 4px;
+  background-color: var(--color-elements);
+}
+
+.indicatorActive {
+  background-color: var(--color-primary);
+}

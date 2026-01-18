@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+@mixin on-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin table-grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns-tablet, 1fr);
+  column-gap: 16px;
+}
+
+@mixin desktop-grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns-desktop, 1fr);
+  column-gap: 16px;
+}
+
+@mixin body-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+}
+
+@mixin small-text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0;
+}
+
+@mixin uppercase {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
