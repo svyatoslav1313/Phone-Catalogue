@@ -4,12 +4,15 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 56px;
 
   @include on-tablet {
+    margin-bottom: 64px;
     @include table-grid;
   }
 
   @include on-desktop {
+    margin-bottom: 80px;
     @include desktop-grid;
   }
 }
@@ -67,6 +70,7 @@
 
 .info {
   display: flex;
+  flex-direction: column;
   gap: 4px;
 }
 

@@ -6,9 +6,15 @@
   align-items: center;
   gap: 8px;
   margin-inline: -16px;
+  margin-bottom: 56px;
 
   @include on-tablet {
     margin: 0;
+    margin-bottom: 64px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 80px;
   }
 }
 

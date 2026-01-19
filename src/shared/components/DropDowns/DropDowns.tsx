@@ -40,6 +40,13 @@ export const DropDowns = () => {
   const getItemsLink = (field: string) => {
     const newParams = new URLSearchParams(searchParams);
 
+    if (field === 'all') {
+      newParams.delete('items');
+      newParams.delete('page');
+
+      return `?${newParams.toString()}`;
+    }
+
     newParams.set('items', field);
     newParams.set('page', '1');
 
